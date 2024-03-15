@@ -6,7 +6,7 @@ import Paragraph from "../../Paragraph";
 import Doubletxt from "../../Doubletxt";
 import TwitterIcon from "../../../../assets/Images/Twitter.png";
 import SendIcon from "../../../../assets/Images/Send.png";
-import BarIcon from "../../../../assets/Images/baricon.png";
+import BarIcon from "../../../../assets/Images/baricon1.png";
 import RecIcon from "../../../../assets/Images/recticon.png";
 import UniIcon from "../../../../assets/Images/unicorn.png";
 import { StyledButtonLink, StyledList3 } from "../../../Styles/Navbar.styles";
