@@ -3,23 +3,30 @@ import styled from "@emotion/styled";
 import { Box, Button, Container, Link } from "@mui/material";
 import Switch from "@mui/material/Switch";
 
+const nvidiaGreen = '#76b900';
+const darkGrey = '#333333';
+const lightGrey = '#AAAAAA';
+const black = '#1A1A1A';
+
 const DesktopMainMenu = styled(Container)`
-margin-top: 10px;
+  margin-top: 10px;
   padding: 10px 0 10px !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
-  background: linear-gradient(to right, #09090947,#00000047);
+  background: linear-gradient(to right, ${darkGrey}47, ${black}47);
 
   @media (max-width: 799px) {
     display: none;
   }
 `;
+
 const Imagedata = styled.img`
   width: 100%;
-  max-width: ${ (props) => props.mw? props.mw: '100px'};
+  max-width: ${(props) => props.mw ? props.mw : '100px'};
 `;
+
 const MobileMainMenu = styled.div`
   display: flex;
   justify-content: space-between;
@@ -29,46 +36,48 @@ const MobileMainMenu = styled.div`
     display: none;
   }
 `;
+
 const SiteLogo = styled.img`
   max-width: 100%;
   height: auto;
 `;
+
 const MenuLink = styled(Link)`
   font-size: 14px;
   font-family: "OpenSans";
-  color: #fff;
+  color: ${lightGrey};
   text-decoration: none;
-  padding: ${ (props) => props.p? props.p: '0 20px'};
+  padding: ${(props) => props.p ? props.p : '0 20px'};
   cursor: pointer;
   transition-duration: 0.5s;
 
   &:hover, &:active, &:focus {
-    color: #ffffff;
+    color: ${lightGrey};
     transition-duration: 0.5s;
   }
   @media (max-width: 799px) {
     display: block;
-    padding: ${ (props) => props.p? props.p: '15px 0 15px 0px'};
+    padding: ${(props) => props.p ? props.p : '15px 0 15px 0px'};
     text-align: center;
   }
 `;
 
 const DrawerBox = styled(Box)`
   width: 250px;
-  background: #000;
-  min-height: calc( 100dvh - 20px );
+  background: ${black};
+  min-height: calc(100dvh - 20px);
   text-align: center;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-`
+`;
 
-const DrawerDivider = styled.div``
+const DrawerDivider = styled.div``;
 
 const MenuButton = styled(Button)`
-  background: #000;
+  background: ${black};
   width: 35px;
   min-width: unset;
   padding-left: 6px;
@@ -76,10 +85,10 @@ const MenuButton = styled(Button)`
 `;
 
 const Humburgger = styled.span`
-  background: #6137EA;
+  background: ${nvidiaGreen};
   height: 24px;
   width: 30px;
-  color: #000000;
+  color: ${black};
   font-size: 5px;
   position: relative;
   border-radius: 1px;
@@ -87,18 +96,17 @@ const Humburgger = styled.span`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border-top: 4px solid #6137EA;
-  border-bottom: 4px solid #6137EA;
+  border-top: 4px solid ${nvidiaGreen};
+  border-bottom: 4px solid ${nvidiaGreen};
 
   &::after,&::before{
     content: 'menu';
-    background: #000;
+    background: ${black};
     display: block;
     height: 9px;
     width: 100%;
-    color: #000;
+    color: ${black};
   }
-
 `;
 const HumburggerClose = styled.span`
   height: 35px;
@@ -113,16 +121,15 @@ const HumburggerClose = styled.span`
 
   &::after,&::before{
     content: 'menu';
-    background: #6137EA;
+    background: ${nvidiaGreen};
     display: block;
     height: 6px;
     width: 100%;
-    color: #6137EA;
+    color: ${nvidiaGreen};
     position: absolute;
   }
   &::before{ transform: rotate(-45deg) translate(-8px, 8px); top: 3px;}
   &::after{ transform: rotate(45deg) translate(-12px, -12px); bottom: -3px; }
-
 `;
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
@@ -148,7 +155,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     }
   },
   "& .MuiSwitch-thumb": {
-    backgroundColor: theme.switchColor,
+    backgroundColor: theme.palette.mode === "dark" ? "#fff" : "#fff",
     width: 32,
     height: 32,
     "&:before": {
@@ -172,5 +179,4 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   }
 }));
 
-
-export { DesktopMainMenu, MobileMainMenu, MenuLink, SiteLogo, DrawerBox, DrawerDivider, MenuButton, Humburgger, HumburggerClose, MaterialUISwitch,Imagedata };
+export { DesktopMainMenu, MobileMainMenu, MenuLink, SiteLogo, DrawerBox, DrawerDivider, MenuButton, Humburgger, HumburggerClose, MaterialUISwitch, Imagedata };
