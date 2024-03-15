@@ -1,0 +1,149 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    margin: 0
+}
+
+code {
+    font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+.App {
+    background-color: #000;
+    text-align: center
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none
+}
+
+@media (prefers-reduced-motion:no-preference) {
+    .App-logo {
+        animation: App-logo-spin 20s linear infinite
+    }
+}
+
+.App-header {
+    align-items: center;
+    background-color: #282c34;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    justify-content: center;
+    min-height: 100vh
+}
+
+.App-link {
+    color: #61dafb
+}
+
+@keyframes App-logo-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@font-face {
+    font-family: 'PopR';
+    src: url('/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'PopSb';
+    src: url('/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'PoppinsM';
+    src: url('/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Ral';
+    src: url('/Raleway-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Rm';
+    src: url('/Raleway-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'RSb';
+    src: url('/Raleway-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('/OpenSans-VariableFont_wdth,wght.ttf');
+}
+
+
+.maindog {
+    height: auto;
+    max-width: 90%;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.orangebox {
+    display: flex;
+    height: auto;
+    max-width: 100%
+}
+
+.maintext {
+    color: #f9860b
+}
+
+.maintext:before {
+    -webkit-text-fill-color: #0000;
+    -webkit-text-stroke: 1px;
+    content: "INU";
+    position: absolute;
+    right: 5px
+}
+
+.FeatureDog {
+    height: auto;
+    max-width: 100%
+}
+
+.supstyle {
+    font-size: 95px;
+    @media(max-width: 600px) {
+        font-size:40px
+    }
+}
+
+body {
+    background-color: #000
+}
+
+@keyframes Blink {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
