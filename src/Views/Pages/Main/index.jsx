@@ -12,7 +12,7 @@ import Loader from '../../Components/Sections/S0-Loader';
 import { useState,useEffect} from 'react';
 import {motion} from 'framer-motion';
 import ElevateExperience from '../../Components/Sections/S3-Elevate';
-import earth from "../../../assets/Images/img4.png"
+import earth from "../../../assets/Images/earth2.webp"
 import Timeline from '../../Components/Sections/S8-Timeline';
 
 
