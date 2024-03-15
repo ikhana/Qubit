@@ -6,7 +6,6 @@ import CustomButton from "../CustomBtn";
 
 const LockerMenu = (props) => {
   const menuList = [
-    // You can pass 4 parameters for menu title, link, target and customClass
     {
       title: "Home",
       link: "/",
@@ -24,12 +23,11 @@ const LockerMenu = (props) => {
       link: "/#tokenomics",
     },
     {
-      title: <CustomButton>Download</CustomButton>,
-      link: "/download",
-      p: "0 0px 0 20px"
+      title: "Roadmap",
+      link: "/#roadmap",
     },
     {
-      title: <CustomButton bgc="transparent" w="190px" b="1px solid #ffffffc8">Become A Provider</CustomButton>,
+      title: <CustomButton bgc="linear-gradient(to right, #76b900, #333333)" w="190px" b="1px solid #ffffffc8">Platform</CustomButton>,
       link: "/whitelabel",
       p: "0 20px 0 5px"
     },

@@ -9,6 +9,10 @@ import Maintxt from "../../Maintxt";
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
+const nvidiaGreen = '#76b900';
+const darkGrey = '#333333';
+const lightGrey = '#AAAAAA';
+
 const MainIconImg2 = styled.img`
   width: 40px;
   height: auto;
@@ -18,16 +22,18 @@ const WhiteLink = styled(Link)`
   text-decoration: none;
   color: white;
 `;
+
 const Summary = () => {
   const navLinks = [
-  { title: "Home", link: "#home" },
-  { title: "Features", link: "#features" },
-  { title: "Tokenomics", link: "#tokenomics" },
-  { title: "Pricing", link: "#pricing" },
+    { title: "Home", link: "#home" },
+    { title: "Features", link: "#features" },
+    { title: "Tokenomics", link: "#tokenomics" },
+    { title: "Pricing", link: "#pricing" },
+    { title: "Roadmap", link: "#roadmap" },
   ];
-  return (
-    <><Box bgcolor="#090909" padding="20px 0">
 
+  return (
+    <Box bgcolor={darkGrey} padding="20px 0">
       <Blackbg noht noclr>
         <Container
           maxWidth="xl"
@@ -58,15 +64,15 @@ const Summary = () => {
                 gap={1}
               >
                 <MainIconImg2 src={MainIcon} alt="anonsol" />
-                  <Typography  variant="h6" color="white"  fontFamily="OpenSans">
+                  <Typography variant="h6" color="white" fontFamily="OpenSans">
                   Shadow  
-                  <Typography variant="h6" color="white" component="span"  fontFamily="OpenSans">
+                  <Typography variant="h6" color="white" component="span" fontFamily="OpenSans">
                   &nbsp; Node
                   </Typography>
                   </Typography>
               </Link>
               <Paragraph
-                color="#A8A8A8"
+                color={lightGrey}
                 variant="caption"
                 maxWidth="250px"
                 sx={{
@@ -76,7 +82,7 @@ const Summary = () => {
               Shadow Node redefines online privacy through a decentralized VPN for secure, private, and unrestricted internet access.
               </Paragraph>
               <Paragraph
-                color="#A8A8A8"
+                color={lightGrey}
                 variant="body2" 
                 maxWidth="250px"
                 sx={{
@@ -102,7 +108,7 @@ const Summary = () => {
                 },
               }}
             >
-              <Maintxt variant="h6" color="#835DFF">Quick Links</Maintxt>
+              <Maintxt variant="h6" color={nvidiaGreen}>Quick Links</Maintxt>
               {navLinks.map((item) => (
                 <Link
                   href={item.link}
@@ -129,12 +135,12 @@ const Summary = () => {
               }}
             >
               <Grid item>
-                <Maintxt variant="h6"  color="#835DFF">Socials</Maintxt>
+                <Maintxt variant="h6" color={nvidiaGreen}>Socials</Maintxt>
               </Grid>
               <Grid item display="flex" flexDirection="column" gap="5px">
                 <WhiteLink href="https://twitter.com/shadownodeVPN" target="blank">
                   <Paragraph fontFamily="OpenSans" my="0px">
-                    X(Twitter)
+                    Twitter
                   </Paragraph>
                 </WhiteLink>
                 <WhiteLink href="https://t.me/shadownodeVPN" target="blank">
@@ -147,9 +153,9 @@ const Summary = () => {
           </Grid>
         </Container>
       </Blackbg>
-          </Box>
-    </>
+    </Box>
   );
 };
 
 export default Summary;
+

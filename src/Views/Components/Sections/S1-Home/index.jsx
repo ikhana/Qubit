@@ -1,6 +1,6 @@
 import React from 'react';
 import  { Container, Grid} from '@mui/material';
-import MainBg from "../../../../assets/Images/heroBg1.webp";
+import MainBg from "../../../../assets/Images/heroBg.webp";
 import styled from '@emotion/styled';
 import Regtxt from '../../Regtxt';
 import Paragraph from '../../Paragraph';

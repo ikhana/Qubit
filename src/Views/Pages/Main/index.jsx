@@ -12,7 +12,8 @@ import Loader from '../../Components/Sections/S0-Loader';
 import { useState,useEffect} from 'react';
 import {motion} from 'framer-motion';
 import ElevateExperience from '../../Components/Sections/S3-Elevate';
-import earth from "../../../assets/Images/earth.jpg"
+import earth from "../../../assets/Images/img4.png"
+import Timeline from '../../Components/Sections/S8-Timeline';
 
 
 
@@ -71,8 +72,9 @@ const Main = () => {
             <Home />
             <Why/>
             <ElevateExperience/>
-            <Purple/>
+            <Timeline/>
             <Styleddiv>
+                
             <Tokenomics/>
                 {/* <Motionimg initial={{y:"50%"}} whileInView={{y:"0%"}} viewport={{once: true}} transition={{duration: 1}} src={Back} />
                 <Numbers/> */}

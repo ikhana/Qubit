@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Grid, Link} from "@mui/material";
-import {Blackbg} from "../../../Styles/Maintext.styles";
+import { Container, Grid, Link } from "@mui/material";
+import { Blackbg } from "../../../Styles/Maintext.styles";
 import Maintxt from "../../Maintxt";
 import Paragraph from "../../Paragraph";
 import Doubletxt from "../../Doubletxt";
@@ -11,55 +11,51 @@ import RecIcon from "../../../../assets/Images/recticon.png";
 import UniIcon from "../../../../assets/Images/unicorn.png";
 import { StyledButtonLink, StyledList3 } from "../../../Styles/Navbar.styles";
 import { motion } from "framer-motion";
+
+const nvidiaGreen = '#76b900';
+const darkGrey = '#333333';
+const lightGrey = '#AAAAAA';
+const black = '#1A1A1A';
+
 const MotionCont = motion(Container);
 
 const navLinks = [
   {
     title: <img src={BarIcon} alt="bar icon" width={18} height={18}></img>,
     link: "https://etherscan.io/address/0xc668695dcbcf682de106da94bde65c9bc79362d3",
-    target:"blank"
+    target: "blank"
   },
   {
     title: <img src={RecIcon} alt="rect icon" width={18} height={18}></img>,
     link: "https://www.dextools.io/app/en/ether/pair-explorer/0x1686f2a47709eb4cd6d0f1bf48468aac7d68da75?t=1710352969313",
-    target:"blank"
+    target: "blank"
   },
   {
     title: <img src={UniIcon} alt="unicorn icon" width={25} height={25}></img>,
     link: "https://app.uniswap.org/swap?outputCurrency=0xc668695dcbcf682de106da94bde65c9bc79362d3&chain=ethereum",
-    target:"blank"
+    target: "blank"
   },
   {
     title: <img src={SendIcon} alt="send icon" width={18} height={18}></img>,
     link: "https://t.me/shadownodeVPN",
-    target:"blank"
-},
-{
-    title: <img src={TwitterIcon} alt="x icon" width={18} height={18}></img>,
+    target: "blank"
+  },
+  {
+    title: <img src={TwitterIcon} alt="twitter icon" width={18} height={18}></img>,
     link: "https://twitter.com/shadownodeVPN",
-    target:"blank"
+    target: "blank"
   },
 ];
+
 const Tokenomics = () => {
   return (
-    <Blackbg noclr id="tokenomics" style={{padding:"10px"}}>
-      {/* <Motionimg
-        tp="21%"
-        initial={{ x: "50%" }}
-        whileInView={{ x: "0%" }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        src={Purplebg2}
-        alt="purple pic"
-      /> */}
+    <Blackbg noclr id="tokenomics" style={{ padding: "10px" }}>
       <MotionCont
         maxWidth="xl"
         initial={{ y: "20%" }}
         whileInView={{ y: "0%" }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        // padding="0 !imoportant"
-        
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -67,10 +63,10 @@ const Tokenomics = () => {
           alignItems: "center",
           paddingBottom: "100px",
           paddingTop: { xs: "50px", md: "100px" },
-          marginTop:"30px",
-          background:"rgba(6,6,6,.84)",
-          border:"1px solid #4F36A3",
-          borderRadius:"10px"
+          marginTop: "30px",
+          background: "rgba(6,6,6,.84)",
+          border: `1px solid ${nvidiaGreen}`,
+          borderRadius: "10px"
         }}
       >
         <Maintxt
@@ -102,8 +98,7 @@ const Tokenomics = () => {
             py={1}
             marginTop={2}
             sx={{
-              background:
-                "#060606",
+              background: `${black}`,
             }}
           >
             <Paragraph fontFamily="OpenSans" my={1}>
@@ -126,14 +121,13 @@ const Tokenomics = () => {
             px={3}
             py={1}
             sx={{
-              background:
-                "linear-gradient(180deg,#835DFF , #6137EA )",
+              background: `linear-gradient(180deg, ${nvidiaGreen}, ${darkGrey})`,
             }}
           >
             <Paragraph fontFamily="RSb" my="0px">
               Contract address:
             </Paragraph>
-            <Paragraph fontFamily="RSb" my="0px" textAlign="right" sx={{wordBreak:'break-all'}}>
+            <Paragraph fontFamily="RSb" my="0px" textAlign="right" sx={{ wordBreak: 'break-all' }}>
              0xc668695dcbcf682de106da94bde65c9bc79362d3
             </Paragraph>
           </Grid>
@@ -159,7 +153,7 @@ const Tokenomics = () => {
                   color="inherit"
                   key={item.title}
                 >
-                  <StyledButtonLink sx={{marginTop:"0 !important",marginBottom:"0 !important"}}>{item.title}</StyledButtonLink>
+                  <StyledButtonLink sx={{ marginTop: "0 !important", marginBottom: "0 !important" }}>{item.title}</StyledButtonLink>
                 </Link>
               ))}
             </StyledList3>
