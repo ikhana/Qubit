@@ -1,0 +1,8 @@
+[build]
+  command = "CI='' npm run build" # This command prefixes the build command with CI='' to ignore warnings.
+  publish = "build" # This is the directory that Netlify will deploy.
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
