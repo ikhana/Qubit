@@ -8,6 +8,12 @@ import PurpleButton from '../../PurpleButton';
 import {motion} from 'framer-motion';
 import LockerMenu from '../../LockerMenu';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
+const nvidiaGreen = '#76b900'; 
+const darkGrey = '#333333'; 
+const lightGrey = '#AAAAAA'; 
+const black = '#1A1A1A'; 
+const nvidiaGreenAccent = '#F9860B'; 
 const MotionGrid = motion(Grid);
 
 
@@ -36,8 +42,8 @@ const Home = () => {
       <Container maxWidth="xl"  sx={{ minHeight:"calc(100vh - 84px)" ,display:"flex", flexDirection:"column", justifyContent:"center", paddingTop:{xs:"15%",md:"2%"}, paddingBottom:{xs:"15%",md:"2%"}}}>
       <Grid container>
           <MotionGrid item initial={{x:"-100%"}} whileInView={{x:"0%"}} viewport={{once: true}} transition={{duration: 1}} md={6} xs={12} display="flex" flexDirection="column" alignItems="flex-start">
-          <Paragraph color="#835DFF" sx={{}}>Shadow Node</Paragraph>
-            <Regtxt fs599="33px" my="0px">Stay In The <span style={{fontWeight:"bold",color:"#835DFF"}}>Shadows <br /> </span> While Connecting <br /> <span  style={{fontWeight:"bold"}}>Globally </span></Regtxt>
+          <Paragraph color={nvidiaGreen} sx={{}}>QubitN</Paragraph>
+            <Regtxt fs599="33px" my="0px">Play with Qubits in <span style={{fontWeight:"bold",color:"#76b900"}}>QubitN <br /> </span> While Connecting <br /> <span  style={{fontWeight:"bold"}}>Globally </span></Regtxt>
             <Paragraph padding="10px 0" fontWeight="light" sx={{maxWidth:"500px"}}>Explore Shadow Node’s decentralized VPN framework that empower users with secure, private, and uncensored internet access. Safeguard your sensitive data, evade restrictions and ensure online privacy with Shadow Node.</Paragraph>
             <PurpleButton href="/download">Get VPN<ArrowForwardIcon /></PurpleButton>
           </MotionGrid>
