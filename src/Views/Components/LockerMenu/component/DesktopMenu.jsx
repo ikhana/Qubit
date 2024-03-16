@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../../assets/Images/logo.png";
+import logo from "../../../../assets/Images/logo2.png";
 import { DesktopMainMenu,  Imagedata,  MenuLink } from "../styles";
 import styled from "@emotion/styled";
  const Div = styled.div`

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
-import logo from "../../../../assets/Images/logo.png";
+import logo from "../../../../assets/Images/logo2.png";
 import { MenuLink, MobileMainMenu, SiteLogo, DrawerBox, DrawerDivider, Humburgger, HumburggerClose, MenuButton, Imagedata } from "../styles";
 
 

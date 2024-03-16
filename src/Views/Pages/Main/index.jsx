@@ -16,24 +16,34 @@ import earth from "../../../assets/Images/earth2.webp"
 import Timeline from '../../Components/Sections/S8-Timeline';
 
 
-
 const Styleddiv = styled.div`
     position: relative;
     z-index: 0;
-    width:100%;
+    width: 100%;
     overflow: hidden;
-    scroll-snap-align:start;
-    min-height:100vh;
-    
-  background-image: url(${earth});
-  background-position: top;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  @media(max-width: 900px){
-    background-position: center;   
-  background-size: auto 210vh;
-  }
-`
+    scroll-snap-align: start;
+    min-height: 100vh;
+    background-image: url(${earth});
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    @media(max-width: 900px) {
+        background-position: center;   
+        background-size: auto 210vh;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(26, 26, 26, 0.7)); /* Adjust the colors and opacity to match your theme */
+        z-index: 1;
+    }
+`;
 const Backimg = styled.img`
     position: absolute;
     object-fit: cover;

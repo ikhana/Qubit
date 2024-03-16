@@ -28,7 +28,7 @@ const Blackbg = styled(Container)`
         left: 50%;
         transform: translate(-50%,-25%);
         width: 100%;
-        height: 570px;
+        height: 0px;
         background-image: url(${aboutBG});
         background-position: center;
         background-size: cover;
@@ -45,14 +45,14 @@ const Why = () => {
         <Blackbg maxWidth="xl" id="features" >
             <MotionCont maxWidth="lg" initial={{y:"20%"}} whileInView={{y:"0%"}} viewport={{once: true}} transition={{duration: 1}} sx={{display:"flex", flexDirection:"column", justifyContent:"center",alignItems:"center", paddingBottom:"100px",paddingTop:{xs:"0px", md:"50px"} }}>
                 <Paragraph color={nvidiaGreen} sx={{paddingTop:"20px"}}>Features</Paragraph>
-                <Maintxt textAlign="center" mt={2} mb={5} color={nvidiaGreen}>Why Use Shadow Node</Maintxt>
+                <Maintxt textAlign="center" mt={2} mb={5} color={nvidiaGreen}>Why Choose QubitN</Maintxt>
                 <Grid container gap={3} alignItems="start" justifyContent="center">
-                    <Cardimg  psrc={Pic1} def1="Decentralized VPN" def2="Experience a new era of online privacy with our Decentralized VPN (dVPN). Unlike traditional VPNs, our dVPN leverages blockchain for a secure, private, and uncensored internet. Enjoy enhanced security with provable encryption, distributed exit nodes, and a relay network for internet freedom." />
-                    <Cardimg psrc={Pic2} def1="FIAT & Crypto On-Ramps" def2="Bridge traditional finance and the crypto world effortlessly with our FIAT & Crypto On-Ramps. Seamlessly convert between fiat and cryptocurrencies for a user-friendly experience. Whether you're new or seasoned, our on-ramps simplify engagement with the blockchain ecosystem on your terms." />
-                    <Cardimg  psrc={Pic3}  def1="Run A Node And Get Rewards" def2="Be a vital part of our network by running a node and earning rewards. Running a node on Shadow Node not only contributes to the decentralized infrastructure but also earns SHADE tokens. " />
-                    <Cardimg psrc={Pic3} def1="Seamless Payments" def2="MobETH streamlines your experience with effortless funding options. Replenish your account seamlessly using a variety of payment methods, including e-wallets, bank cards, or cryptocurrencies. Enjoy the convenience of managing your payments with simplicity and ease." />
-                    <Cardimg psrc={Pic3} def1="Seamless Payments" def2="MobETH streamlines your experience with effortless funding options. Replenish your account seamlessly using a variety of payment methods, including e-wallets, bank cards, or cryptocurrencies. Enjoy the convenience of managing your payments with simplicity and ease." />
-                    <Cardimg psrc={Pic3} def1="Seamless Payments" def2="MobETH streamlines your experience with effortless funding options. Replenish your account seamlessly using a variety of payment methods, including e-wallets, bank cards, or cryptocurrencies. Enjoy the convenience of managing your payments with simplicity and ease." />
+                    <Cardimg  psrc={Pic1} def1="Unified Blockchain Fabric" def2="QubitN's Blockchain-Agnostic Orchestration creates a seamless environment for diverse blockchain interactions, empowering developers to build and manage dApps with cross-chain capabilities." />
+                    <Cardimg psrc={Pic2} def1="Edge Computing Evolution" def2="Leverage the power of decentralized edge computing to process data where it's generated, ensuring real-time responses and enhanced privacy for all your IoT devices." />
+                    <Cardimg  psrc={Pic3}  def1="Data Marketplaces Empowered" def2="Participate in QubitN's decentralized data marketplaces, where you can securely monetize your data, retain control, and contribute to a fair and ethical digital economy." />
+                    <Cardimg psrc={Pic2} def1="GPU Power on Demand" def2="Access high-performance GPU resources tailored for a variety of computational tasks. Enjoy the flexibility and scalability of QubitN's decentralized GPU hosting." />
+                    <Cardimg psrc={Pic1} def1="Intelligent Automation" def2="Harness the capabilities of AI and ML to automate and enhance the functionality of smart contracts, optimize resource allocation, and pioneer proactive data privacy measures." />
+                    <Cardimg psrc={Pic3} def1="Community and Growth" def2="Join a thriving community that supports growth and collaboration. Benefit from comprehensive resources, multi-channel support, and a platform that evolves with its users." />
                 </Grid>
             </MotionCont>
         </Blackbg>
