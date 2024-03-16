@@ -2,13 +2,13 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Container, Grid } from '@mui/material';
 import Maintxt from '../../Maintxt';
-import Pic1 from "../../../../assets/Images/Image1.png";
+import Pic1 from "../../../../assets/Images/FutureProofTech.png";
 import Paragraph from '../../Paragraph';
-import Pic2 from "../../../../assets/Images/Image2.png";
+import Pic2 from "../../../../assets/Images/BlockchainV.png";
 import Cardimg from '../../Cardimg';
 import { motion } from 'framer-motion';
 
-const nvidiaGreen = '#76b900'; 
+const nvidiaGreen = '#76b900';
 const black = '#1A1A1A';
 
 const Blackbg = styled.div`
@@ -25,15 +25,15 @@ const ElevateExperience = () => {
   return (
     <Blackbg id="ElevateExperience">
       <MotionCont maxWidth="lg" initial={{y:"20%"}} whileInView={{y:"0%"}} viewport={{once: true}} transition={{duration: 1}} sx={{display:"flex", flexDirection:"column", justifyContent:"center",alignItems:"center", paddingBottom:"100px",paddingTop:{xs:"0px", md:"50px"} }}>
-        <Maintxt textAlign="center" my={2} color={nvidiaGreen}>Elevate Your Online Experience</Maintxt>
-        <Paragraph color="#fff" sx={{paddingBottom:"20px"}} maxWidth="900px" textAlign="center">Unlock the future of internet privacy with Shadow Node's decentralized VPN, seamless FIAT & Crypto On-Ramps, and rewarding node operations. Watch innovation meet simplicity!</Paragraph>
+        <Maintxt textAlign="center" my={2} color={nvidiaGreen}>Visionary QubitN</Maintxt>
+        <Paragraph color="#fff" sx={{paddingBottom:"20px"}} maxWidth="900px" textAlign="center">Dive into the world of QubitN where future-proof technologies and community-driven innovation forge the path to a decentralized future.</Paragraph>
         <Grid container gap={1} alignItems="start" justifyContent="center">
-          <Cardimg xs={12} sm={12} md={5.5} padd="0 26%" psrc={Pic1} bg="transparent" def1="Stay Connected Securely" def2="Embrace a secure online journey with Shadow Node's decentralized VPN, ensuring your connection is fortified against threats. Protect your data and privacy while staying seamlessly connected in a world that values security and freedom." />
-          <Cardimg xs={12} sm={12} md={5.5} padd="0 26%" psrc={Pic2} bg="transparent" def1="Optimize Your Connection" def2="Experience a heightened level of connectivity with Shadow Node's advanced technology. Optimize your online experience through our decentralized VPN, ensuring swift and reliable connections. Enjoy the internet at its best with enhanced speed, privacy, and reliability." />
+          <Cardimg xs={12} sm={12} md={5.5} padd="0 26%" psrc={Pic1} bg="transparent" def1="Future-Proof Technologies" def2="Embark on a journey with QubitN as we explore and integrate cutting-edge technologies like quantum computing and next-gen encryption to ensure your digital infrastructure is not just for today, but tomorrow and beyond." />
+          <Cardimg xs={12} sm={12} md={5.5} padd="0 26%" psrc={Pic2} bg="transparent" def1="Community-Driven Innovation" def2="At QubitN, innovation is not a solo journey. It’s a collaborative effort that thrives on the diverse ideas and contributions of our global community. Join us to shape the future of decentralized computing, where every voice matters and every idea can spark change." />
         </Grid>
       </MotionCont>
     </Blackbg>
   );
 }
 
-export default ElevateExperience;
+export default ElevateExperience ;

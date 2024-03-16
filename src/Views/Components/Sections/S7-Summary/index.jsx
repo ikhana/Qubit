@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Link, Container, Typography, Box } from "@mui/material";
 import Paragraph from "../../Paragraph";
-import MainIcon from "../../../../assets/Images/MainIcon.png";
+import MainIcon from "../../../../assets/Images/logo.png"; // Update the logo path
 import styled from "@emotion/styled";
 import { Blackbg } from "../../../Styles/Maintext.styles";
 import PurpleButton from "../../PurpleButton";
@@ -28,7 +28,7 @@ const Summary = () => {
     { title: "Home", link: "#home" },
     { title: "Features", link: "#features" },
     { title: "Tokenomics", link: "#tokenomics" },
-    { title: "Pricing", link: "#pricing" },
+    { title: "Platform", link: "#platform" }, // Updated from "Pricing" to "Platform"
     { title: "Roadmap", link: "#roadmap" },
   ];
 
@@ -63,13 +63,10 @@ const Summary = () => {
                 alignItems={{xs:'start',md:'center'}}
                 gap={1}
               >
-                <MainIconImg2 src={MainIcon} alt="anonsol" />
-                  <Typography variant="h6" color="white" fontFamily="OpenSans">
-                  Shadow  
-                  <Typography variant="h6" color="white" component="span" fontFamily="OpenSans">
-                  &nbsp; Node
-                  </Typography>
-                  </Typography>
+                <MainIconImg2 src={MainIcon} alt="QubitN Logo" />
+                <Typography variant="h6" color="white" fontFamily="OpenSans">
+                  QubitN
+                </Typography>
               </Link>
               <Paragraph
                 color={lightGrey}
@@ -79,7 +76,7 @@ const Summary = () => {
                   textAlign: { xs: "start", md: "start" },
                 }}
               >
-              Shadow Node redefines online privacy through a decentralized VPN for secure, private, and unrestricted internet access.
+                Explore QubitN’s innovative platform for decentralized computing, blockchain-agnostic orchestration, and secure data marketplaces.
               </Paragraph>
               <Paragraph
                 color={lightGrey}
@@ -89,9 +86,9 @@ const Summary = () => {
                   textAlign: { xs:"start", md: "start" },
                 }}
               >
-               Email: info@shadownode.org
+                Email: info@qubitn.org
               </Paragraph>
-              <PurpleButton href="/download" tet>Get VPN<ArrowForwardIcon /></PurpleButton>
+              <PurpleButton href="/platform">Explore Platform<ArrowForwardIcon /></PurpleButton>
             </Grid>
             <Grid
               item
@@ -135,15 +132,16 @@ const Summary = () => {
               }}
             >
               <Grid item>
-                <Maintxt variant="h6" color={nvidiaGreen}>Socials</Maintxt>
+                <Maintxt variant="h6" color={nvidiaGreen}>Follow Us</Maintxt>  
               </Grid>
               <Grid item display="flex" flexDirection="column" gap="5px">
-                <WhiteLink href="https://twitter.com/shadownodeVPN" target="blank">
+                {/* Update social links accordingly */}
+                <WhiteLink href="https://twitter.com/QubitN" target="blank">
                   <Paragraph fontFamily="OpenSans" my="0px">
                     Twitter
                   </Paragraph>
                 </WhiteLink>
-                <WhiteLink href="https://t.me/shadownodeVPN" target="blank">
+                <WhiteLink href="https://t.me/QubitN" target="blank">
                   <Paragraph fontFamily="OpenSans" my="0px">
                     Telegram
                   </Paragraph>
@@ -158,4 +156,3 @@ const Summary = () => {
 };
 
 export default Summary;
-

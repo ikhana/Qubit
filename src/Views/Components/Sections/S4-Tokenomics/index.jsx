@@ -42,7 +42,7 @@ const navLinks = [
   },
   {
     title: <img src={TwitterIcon} alt="twitter icon" width={18} height={18}></img>,
-    link: "https://twitter.com/shadownodeVPN",
+    link: "https://x.com/qubitnio",
     target: "blank"
   },
 ];
@@ -84,8 +84,8 @@ const Tokenomics = () => {
           alignItems="center"
         >
           <Grid container item xs={12} md={11} justifyContent="space-evenly">
-            <Doubletxt def1="Shadow Node" def2="Name" />
-            <Doubletxt def1="$SVPN" def2="Symbol" />
+            <Doubletxt def1="QubitN" def2="Name" />
+            <Doubletxt def1="$QBN" def2="Symbol" />
             <Doubletxt def1="1,000,000,000" def2="Supply" />
             <Doubletxt def1="4/4" def2="Buy/Sell Tax" />
           </Grid>

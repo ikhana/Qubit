@@ -37,15 +37,15 @@ const Home = () => {
       <Container maxWidth="xl" sx={{ minHeight: "calc(100vh - 84px)", display: "flex", flexDirection: "column", justifyContent: "center", paddingTop: { xs: "15%", md: "2%" }, paddingBottom: { xs: "15%", md: "2%" } }}>
         <Grid container>
           <MotionGrid item initial={{ x: "-100%" }} whileInView={{ x: "0%" }} viewport={{ once: true }} transition={{ duration: 1 }} md={6} xs={12} display="flex" flexDirection="column" alignItems="flex-start">
-            <Paragraph color={nvidiaGreen}>QubitN</Paragraph>
-            <Regtxt fs599="33px" my="0px">Play with Qubits in <span style={{ fontWeight: "bold", color: "#76b900" }}>QubitN <br /> </span> While Connecting <br /> <span style={{ fontWeight: "bold" }}>Globally </span></Regtxt>
-            <Paragraph padding="10px 0" fontWeight="light" sx={{ maxWidth: "500px" }}>Explore Shadow Node’s decentralized VPN framework that empower users with secure, private, and uncensored internet access. Safeguard your sensitive data, evade restrictions and ensure online privacy with Shadow Node.</Paragraph>
+            <Paragraph color={nvidiaGreen}>Welcome to QubitN</Paragraph>
+            <Regtxt fs599="33px" my="0px">Empowering the Future <span style={{ fontWeight: "bold", color: "#76b900" }}>of Decentralized Computing<br /></span> with Innovation & Collaboration</Regtxt>
+            <Paragraph padding="10px 0" fontWeight="light" sx={{ maxWidth: "500px" }}>Dive into the world of QubitN, where cutting-edge technology meets decentralized innovation. Explore our platform’s blockchain-agnostic orchestration, decentralized data marketplaces, and robust GPU hosting solutions designed to power your projects into the future.</Paragraph>
             <Grid container spacing={2}>
               <Grid item>
-                <PurpleButton href="/download">Rent Qubit<ArrowForwardIcon /></PurpleButton>
+                <PurpleButton href="/platform">Explore Platform<ArrowForwardIcon /></PurpleButton>
               </Grid>
               <Grid item>
-                <PurpleButton href="/download">White Paper</PurpleButton>
+                <PurpleButton href="/gitbook">Learn More</PurpleButton>
               </Grid>
             </Grid>
           </MotionGrid>
@@ -56,3 +56,4 @@ const Home = () => {
 }
 
 export default Home;
+

@@ -9,14 +9,20 @@ const black = '#1A1A1A';
 const nvidiaGreenAccent = '#F9860B'; 
 
 export const Blackbg = styled.div`
-  background-color: ${(props) => props.noclr ? "transparent" : black};
+  background: ${(props) => props.noclr ? "transparent" : `linear-gradient(135deg, ${black} 0%, ${darkGrey} 50%, ${nvidiaGreen} 51%, ${black} 100%)`};
+  background-size: 200% 200%;
+  animation: GradientAnimation 30s ease infinite;
   overflow: hidden;
   position: relative;
   z-index: 1;
   min-height:  ${(props) => props.noht ? "auto" : "100vh"};
-  /* scroll-snap-align: start; */
+  
+  @keyframes GradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 `;
-
 export const StyledContainer = styled(Container)`
     background-color: ${(props) => props.bgclr ? props.bgclr : black};
     min-height: ${(props) => props.mht ? props.mht : "auto"};
