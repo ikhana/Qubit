@@ -29,9 +29,9 @@ const Styleddiv = styled.div`
   background-position: top;
   background-size: 100%;
   background-repeat: no-repeat;
-  @media(max-width: 899px){
-    background-position: top;   
-  background-size: auto 110vh;
+  @media(max-width: 900px){
+    background-position: center;   
+  background-size: auto 210vh;
   }
 `
 const Backimg = styled.img`
@@ -54,6 +54,8 @@ const Backimg = styled.img`
 }
 
 `
+
+
 
 const Motionimg = motion(Backimg)
 

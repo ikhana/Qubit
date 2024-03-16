@@ -21,8 +21,11 @@ const HeaderDesign = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  @media(max-width: 900px){
+
+  @media(max-width: 680px){
     min-height: 100vh;
+    background-size: auto 100vh; // Adjust background size to fit the height
+    background-position: center top; // Adjust background position to align with the top
   }
 `;
 
