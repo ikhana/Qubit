@@ -72,7 +72,7 @@ const Timeline = () => {
       <h1 className="roadmap-title">Roadmap</h1>
       <ol className="roadmap-timeline js-roadmap-timeline">
         <li className="roadmap-timeframe js-roadmap-timeframe">
-          <div className="roadmap-date">May 2024</div>
+          <div className="roadmap-date">Q2 2024</div>
           <svg
             className="roadmap-swirly"
             version="1.1"
@@ -84,23 +84,21 @@ const Timeline = () => {
             <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
             <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
           </svg>
-
+  
           <ul className="roadmap-events">
             <li className="roadmap-event">
               <div className="roadmap-vline"></div>
-              BITWIT Launch: The Genesis of a New Digital Currency
+              Platform Launch: Introducing QubitN
             </li>
             <li className="roadmap-event">
               <div className="roadmap-vline"></div>
-              BITWIT officially enters the crypto market, offering innovative
-              transaction solutions and a robust platform for growth and
-              investment.
+              QubitN's decentralized computing platform goes live, offering blockchain-agnostic orchestration and GPU hosting solutions.
             </li>
           </ul>
         </li>
-
+  
         <li className="roadmap-timeframe js-roadmap-timeframe">
-          <div className="roadmap-date">July 2024</div>
+          <div className="roadmap-date">Q3 2024</div>
           <svg
             className="roadmap-swirly"
             version="1.1"
@@ -115,98 +113,91 @@ const Timeline = () => {
           <ul className="roadmap-events">
             <li className="roadmap-event">
               <div className="roadmap-vline"></div>
-              Strategic Partnerships: Expanding Horizons
+              Community Growth & Engagement Initiatives
             </li>
             <li className="roadmap-event">
               <div className="roadmap-vline"></div>
-              Forming alliances with key fintech players, BITWIT aims to
-              broaden its ecosystem and enhance its technological
-              infrastructure.
+              Launch of community engagement programs to foster collaboration and innovation within the QubitN ecosystem.
             </li>
           </ul>
         </li>
-
         <li className="roadmap-timeframe js-roadmap-timeframe">
-          <div className="roadmap-date">September 2024</div>
-          <svg
-            className="roadmap-swirly"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            preserveAspectRatio="none"
-            viewBox="-2 0 54 80"
-          >
-            <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
-            <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
-          </svg>
-          <ul className="roadmap-events">
-            <li className="roadmap-event">
-              <div className="roadmap-vline"></div>
-              Community Growth: Cultivating the BITWIT Family
-            </li>
-            <li className="roadmap-event">
-              <div className="roadmap-vline"></div>
-              Through community events and incentives, we focus on growing our
-              user base and fostering a supportive network of BITWIT
-              enthusiasts.
-            </li>
-          </ul>
-        </li>
+        <div className="roadmap-date">Q4 2024</div>
+        <svg
+          className="roadmap-swirly"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          preserveAspectRatio="none"
+          viewBox="-2 0 54 80"
+        >
+          <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
+          <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
+        </svg>
+        <ul className="roadmap-events">
+          <li className="roadmap-event">
+            <div className="roadmap-vline"></div>
+            Decentralized Data Marketplaces Launch
+          </li>
+          <li className="roadmap-event">
+            <div className="roadmap-vline"></div>
+            Introduction of secure, decentralized data marketplaces, empowering users to monetize and share data ethically.
+          </li>
+        </ul>
+      </li>
 
-        <li className="roadmap-timeframe js-roadmap-timeframe">
-          <div className="roadmap-date">December 2024</div>
-          <svg
-            className="roadmap-swirly"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            preserveAspectRatio="none"
-            viewBox="-2 0 54 80"
-          >
-            <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
-            <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
-          </svg>
-          <ul className="roadmap-events">
-            <li className="roadmap-event">
-              <div className="roadmap-vline"></div>
-              BITWIT Wallet Release: Your Crypto, Your Control
-            </li>
-            <li className="roadmap-event">
-              <div className="roadmap-vline"></div>
-              Launch of the BITWIT Wallet, providing a secure and
-              user-friendly environment for managing and trading BITWIT tokens.
-            </li>
-          </ul>
-        </li>
+      <li className="roadmap-timeframe js-roadmap-timeframe">
+        <div className="roadmap-date">Q1 2025</div>
+        <svg
+          className="roadmap-swirly"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          preserveAspectRatio="none"
+          viewBox="-2 0 54 80"
+        >
+          <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
+          <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
+        </svg>
+        <ul className="roadmap-events">
+          <li className="roadmap-event">
+            <div className="roadmap-vline"></div>
+            AI & ML Integration for Enhanced Computing
+          </li>
+          <li className="roadmap-event">
+            <div className="roadmap-vline"></div>
+            Rollout of AI and ML-driven features to automate and optimize decentralized computing processes.
+          </li>
+        </ul>
+      </li>
 
-        <li className="roadmap-timeframe js-roadmap-timeframe">
-          <div className="roadmap-date">March 2025</div>
-          <svg
-            className="roadmap-swirly"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            preserveAspectRatio="none"
-            viewBox="-2 0 54 80"
-          >
-            <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
-            <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
-          </svg>
-          <ul className="roadmap-events">
-            <li className="roadmap-event">
-              <div className="roadmap-vline"></div>
-              Governance Protocol: Empowering Token Holders
-            </li>
-            <li className="roadmap-event">
-              <div className="roadmap-vline"></div>
-              Introduction of governance protocols, giving BITWIT token holders
-              a voice in the project's future developments and decisions.
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-  );
-};
-
-export default Timeline;
+      <li className="roadmap-timeframe js-roadmap-timeframe">
+        <div className="roadmap-date">Q2 2025</div>
+        <svg
+          className="roadmap-swirly"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          preserveAspectRatio="none"
+          viewBox="-2 0 54 80"
+        >
+          <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
+          <path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"></path>
+        </svg>
+        <ul className="roadmap-events">
+          <li className="roadmap-event">
+            <div className="roadmap-vline"></div>
+            Global Expansion and Strategic Partnerships
+          </li>
+          <li className="roadmap-event">
+            <div className="roadmap-vline"></div>
+            Expanding QubitN's reach through global partnerships, enhancing the ecosystem's capabilities and accessibility.
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+);
+  }
+  
+  export default Timeline;

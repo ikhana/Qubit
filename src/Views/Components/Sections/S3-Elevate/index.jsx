@@ -4,7 +4,7 @@ import { Container, Grid } from '@mui/material';
 import Maintxt from '../../Maintxt';
 import Pic1 from "../../../../assets/Images/FutureProofTech.png";
 import Paragraph from '../../Paragraph';
-import Pic2 from "../../../../assets/Images/BlockchainV.png";
+import Pic2 from "../../../../assets/Images/CommunityInnovation.png";
 import Cardimg from '../../Cardimg';
 import { motion } from 'framer-motion';
 

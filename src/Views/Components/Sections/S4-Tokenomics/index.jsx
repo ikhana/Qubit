@@ -22,22 +22,22 @@ const MotionCont = motion(Container);
 const navLinks = [
   {
     title: <img src={BarIcon} alt="bar icon" width={18} height={18}></img>,
-    link: "https://etherscan.io/address/0xc668695dcbcf682de106da94bde65c9bc79362d3",
+    link: "",
     target: "blank"
   },
   {
     title: <img src={RecIcon} alt="rect icon" width={18} height={18}></img>,
-    link: "https://www.dextools.io/app/en/ether/pair-explorer/0x1686f2a47709eb4cd6d0f1bf48468aac7d68da75?t=1710352969313",
+    link: "",
     target: "blank"
   },
   {
     title: <img src={UniIcon} alt="unicorn icon" width={25} height={25}></img>,
-    link: "https://app.uniswap.org/swap?outputCurrency=0xc668695dcbcf682de106da94bde65c9bc79362d3&chain=ethereum",
+    link: "",
     target: "blank"
   },
   {
     title: <img src={SendIcon} alt="send icon" width={18} height={18}></img>,
-    link: "https://t.me/shadownodeVPN",
+    link: "",
     target: "blank"
   },
   {
@@ -128,7 +128,7 @@ const Tokenomics = () => {
               Contract address:
             </Paragraph>
             <Paragraph fontFamily="RSb" my="0px" textAlign="right" sx={{ wordBreak: 'break-all' }}>
-             0xc668695dcbcf682de106da94bde65c9bc79362d3
+            
             </Paragraph>
           </Grid>
           <Grid

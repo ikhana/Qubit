@@ -14,10 +14,7 @@ const LockerMenu = (props) => {
       title: "Features",
       link: "#features",
     },
-    {
-      title: "Pricing",
-      link: "/#pricing",
-    },
+   
     {
       title: "Tokenomics",
       link: "/#tokenomics",
@@ -28,7 +25,7 @@ const LockerMenu = (props) => {
     },
     {
       title: <CustomButton bgc="linear-gradient(to right, #76b900, #333333)" w="190px" b="1px solid #ffffffc8">Platform</CustomButton>,
-      link: "/whitelabel",
+      link: "https://re-du.gitbook.io/qubit/",
       p: "0 20px 0 5px"
     },
   ];

@@ -136,7 +136,7 @@ const Summary = () => {
               </Grid>
               <Grid item display="flex" flexDirection="column" gap="5px">
                 {/* Update social links accordingly */}
-                <WhiteLink href="https://twitter.com/QubitN" target="blank">
+                <WhiteLink href="https://x.com/qubitnio" target="blank">
                   <Paragraph fontFamily="OpenSans" my="0px">
                     Twitter
                   </Paragraph>
