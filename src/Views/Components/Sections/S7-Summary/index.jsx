@@ -141,7 +141,7 @@ const Summary = () => {
                     Twitter
                   </Paragraph>
                 </WhiteLink>
-                <WhiteLink href="https://t.me/QubitN" target="blank">
+                <WhiteLink href="https://t.me/qubitN_io" target="blank">
                   <Paragraph fontFamily="OpenSans" my="0px">
                     Telegram
                   </Paragraph>

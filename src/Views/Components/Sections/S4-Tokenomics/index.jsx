@@ -37,7 +37,7 @@ const navLinks = [
   },
   {
     title: <img src={SendIcon} alt="send icon" width={18} height={18}></img>,
-    link: "",
+    link: "https://t.me/qubitN_io",
     target: "blank"
   },
   {
@@ -125,10 +125,10 @@ const Tokenomics = () => {
             }}
           >
             <Paragraph fontFamily="RSb" my="0px">
-              Contract address:
+              Contract address:        
             </Paragraph>
             <Paragraph fontFamily="RSb" my="0px" textAlign="right" sx={{ wordBreak: 'break-all' }}>
-            
+            Coming Soon
             </Paragraph>
           </Grid>
           <Grid
