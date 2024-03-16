@@ -20,7 +20,7 @@ const Cardimg = (props) => {
       position="relative"
       borderRadius="10px"
       bgcolor={props.bg ? props.bg : darkGrey} // Updated to use darkGrey from your theme
-      minHeight="400px"
+      height="520px"
       paddingBottom="10px"
       {...props}
     >
