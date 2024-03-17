@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid } from '@mui/material';
 import MainBg from "../../../../assets/Images/heroBg5.webp";
-import MainBgMobile from "../../../../assets/Images/mobileBg.jpg"
+import MainBgMobile from "../../../../assets/Images/mobileBg1.jpg"
 import styled from '@emotion/styled';
 import Regtxt from '../../Regtxt';
 import Paragraph from '../../Paragraph';
