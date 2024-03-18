@@ -1,44 +1,97 @@
-import { Container, Grid } from '@mui/material';
 import React from 'react';
+import { Container, Grid } from '@mui/material';
+import { Pie } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import Paragraph from '../../Paragraph';
-import { Blackbg, Purplediv } from '../../../Styles/Maintext.styles';
+import { Blackbg } from '../../../Styles/Maintext.styles';
 import Regtxt from '../../Regtxt';
 import { motion } from 'framer-motion';
-import PricingCards from '../../PricingCard';
+import './TokenEconomics.css'; // Ensure you have the corresponding CSS file
+
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const nvidiaGreen = '#76b900';
 const darkGrey = '#333333';
 
-const MotionPurplediv = motion(Purplediv);
+const data = {
+  labels: ['LP', 'CEX Listing', 'Marketing & Partnership', 'Team Tokens', 'Ecosystem Funds/Rewards'],
+  datasets: [
+    {
+      label: 'Token Distribution',
+      data: [75, 5, 6, 4, 10], // Adjusted percentages to your tokenomics
+      backgroundColor: [
+        nvidiaGreen,
+        darkGrey,
+        '#F9860B', // nvidiaGreenAccent, assuming this is the accent color
+        '#AAAAAA', // lightGrey
+        '#1A1A1A' // black
+      ],
+      borderColor: [
+        nvidiaGreen,
+        darkGrey,
+        '#F9860B',
+        '#AAAAAA',
+        '#1A1A1A'
+      ],
+      borderWidth: 1,
+      hoverOffset: 4
+    }
+  ]
+};
 
-const Purple = () => {
+const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'bottom',
+    },
+    title: {
+      display: true,
+      text: 'QubitN Tokenomics',
+      color: 'white',
+      font: {
+        size: 24
+      }
+    }
+  }
+};
+
+const TokenEconomicsChart = () => {
     return (
-        <Blackbg noht id="pricing">
+        <Blackbg noht id="tokenomics">
             <Container maxWidth="xl" sx={{padding:"0 !important"}}>
-                <MotionPurplediv style={{display:"flex", flexDirection:"column", alignItems:"center"}} initial={{y:"20%"}} whileInView={{y:"0%"}} viewport={{once: true}} transition={{duration: 1}}>
-                    <Regtxt textAlign="center" my="0px" color={nvidiaGreen}>Pricing</Regtxt>
+                <motion.div initial={{y:"20%"}} whileInView={{y:"0%"}} viewport={{once: true}} transition={{duration: 1}} style={{display:"flex", flexDirection:"column", alignItems:"center", paddingTop: "50px", paddingBottom: "50px"}}>
+                    <Regtxt textAlign="center" my="0px" color={nvidiaGreen}>Tokenomics</Regtxt>
                     <Paragraph color="#fff" m="10px 0 30px" maxWidth="900px" textAlign="center">
-                        Shadow Node believes in transparency and simplicity. Our pricing plans are designed to cater to your specific needs, providing flexibility and value for every user.
+                        QubitN tokenomics are designed for sustainability and growth, with a total supply of 1B tokens distributed across various segments to support the ecosystem.
                     </Paragraph>
                     <Grid container display={"flex"} justifyContent={"space-between"} gap="20px 0">
-                        <Grid item xs={12} md={5.9} bgcolor="#fff" padding="100px 30px" borderRadius="10px">
-                            <Paragraph variant="h5" paddingBottom="20px" color={nvidiaGreen} textAlign="left">In 3 Steps You Have</Paragraph>
-                            <Paragraph color="#000" variant="h6" maxWidth="400px" textAlign="left">
-                                - Decentralized Service <br /><br />
-                                - Purchase And Usage, Protected From <br />
-                                &nbsp; De-Anonymization<br /><br />
-                                - Quantum-Resistant Encryption
+                        <Grid item xs={12} md={5.9} display="flex" justifyContent="center" alignItems="center">
+                            <Pie data={data} options={options} />
+                        </Grid>
+                        <Grid item xs={12} md={5.9} display="flex" flexDirection="column" alignItems="start" gap="20px">
+                            {/* Add more tokenomics details as necessary */}
+                            <Paragraph color="#fff" variant="body1">
+                                - LP 75%: Lock for a year & will be extended
+                            </Paragraph>
+                            <Paragraph color="#fff" variant="body1">
+                                - CEX Listing 5%: Lock for 2 months
+                            </Paragraph>
+                            <Paragraph color="#fff" variant="body1">
+                                - Marketing & Partnership 6%: 1.5% unlock every month
+                            </Paragraph>
+                            <Paragraph color="#fff" variant="body1">
+                                - Team Tokens 4%: Lock for a year at first then we burn for hype
+                            </Paragraph>
+                            <Paragraph color="#fff" variant="body1">
+                                - Ecosystem Funds/Rewards 10%: Lock for a yr
                             </Paragraph>
                         </Grid>
-                        <Grid item xs={12} md={5.9} display="flex" sx={{flexDirection:{xs:'column',sm:'row'}}} gap="20px">
-                            <PricingCards btnbg="#000000 !important" btnborder={`1px solid ${darkGrey} !important`} pkgType="Introductory" pkgAmopunt="$5" pkgDuration="1 Month" />
-                            <PricingCards maxWidth="calc(100% - 4px)" pkgType="Popular" pkgAmopunt="$55" pkgDuration="12 Month" sx={{background:`linear-gradient(to bottom,#FFFFFF, ${darkGrey})`}} c="#000" b={`2px solid ${nvidiaGreen}`}/>
-                        </Grid>
                     </Grid>
-                </MotionPurplediv>
+                </motion.div>
             </Container> 
         </Blackbg>
     );
 }
 
-export default Purple;
+export default TokenEconomicsChart;

@@ -14,6 +14,7 @@ import {motion} from 'framer-motion';
 import ElevateExperience from '../../Components/Sections/S3-Elevate';
 import earth from "../../../assets/Images/earth2.webp"
 import Timeline from '../../Components/Sections/S8-Timeline';
+import TokenEconomicsChart from '../../Components/Sections/S3-Purple';
 
 
 const Styleddiv = styled.div`
@@ -88,6 +89,7 @@ const Main = () => {
             <Styleddiv>
                 
             <Tokenomics/>
+      
                 {/* <Motionimg initial={{y:"50%"}} whileInView={{y:"0%"}} viewport={{once: true}} transition={{duration: 1}} src={Back} />
                 <Numbers/> */}
                 <Faq/>

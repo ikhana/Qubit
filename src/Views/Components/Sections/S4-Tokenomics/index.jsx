@@ -1,167 +1,163 @@
-import React from "react";
-import { Container, Grid, Link } from "@mui/material";
-import { Blackbg } from "../../../Styles/Maintext.styles";
-import Maintxt from "../../Maintxt";
-import Paragraph from "../../Paragraph";
-import Doubletxt from "../../Doubletxt";
+import React from 'react';
+import { Container, Grid, Link } from '@mui/material';
+import { Pie } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import Paragraph from '../../Paragraph';
+import { Blackbg } from '../../../Styles/Maintext.styles';
+import Maintxt from '../../Maintxt';
 import TwitterIcon from "../../../../assets/Images/Twitter.png";
 import SendIcon from "../../../../assets/Images/Send.png";
 import BarIcon from "../../../../assets/Images/baricon1.png";
 import RecIcon from "../../../../assets/Images/recticon.png";
 import UniIcon from "../../../../assets/Images/unicorn.png";
+import {Typography} from '@mui/material';
 import { StyledButtonLink, StyledList3 } from "../../../Styles/Navbar.styles";
 import { motion } from "framer-motion";
+import './TokenEconomicsChart.css'; // Assuming you have this CSS for styling
+const MotionCont = motion(Container);
+ChartJS.register(ArcElement, Tooltip, Legend);
 
+// Define theme colors
 const nvidiaGreen = '#76b900';
 const darkGrey = '#333333';
 const lightGrey = '#AAAAAA';
 const black = '#1A1A1A';
 
-const MotionCont = motion(Container);
-
-const navLinks = [
-  {
-    title: <img src={BarIcon} alt="bar icon" width={18} height={18}></img>,
-    link: "",
-    target: "blank"
-  },
-  {
-    title: <img src={RecIcon} alt="rect icon" width={18} height={18}></img>,
-    link: "",
-    target: "blank"
-  },
-  {
-    title: <img src={UniIcon} alt="unicorn icon" width={25} height={25}></img>,
-    link: "",
-    target: "blank"
-  },
-  {
-    title: <img src={SendIcon} alt="send icon" width={18} height={18}></img>,
-    link: "https://t.me/qubitN_io",
-    target: "blank"
-  },
-  {
-    title: <img src={TwitterIcon} alt="twitter icon" width={18} height={18}></img>,
-    link: "https://x.com/qubitnio",
-    target: "blank"
-  },
-];
-
-const Tokenomics = () => {
-  return (
-    <Blackbg noclr id="tokenomics" style={{ padding: "10px" }}>
-      <MotionCont
-        maxWidth="xl"
-        initial={{ y: "20%" }}
-        whileInView={{ y: "0%" }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingBottom: "100px",
-          paddingTop: { xs: "50px", md: "100px" },
-          marginTop: "30px",
-          background: "rgba(6,6,6,.84)",
-          border: `1px solid ${nvidiaGreen}`,
-          borderRadius: "10px"
-        }}
-      >
-        <Maintxt
-          textAlign="center"
-          my="0px"
-          sx={{ marginTop: "0" }}
-        >
-          Tokenomics
-        </Maintxt>
-        <Grid
-          container
-          marginTop="70px"
-          justifyContent="center"
-          gap={2}
-          alignItems="center"
-        >
-          <Grid container item xs={12} md={11} justifyContent="space-evenly">
-            <Doubletxt def1="QubitN" def2="Name" />
-            <Doubletxt def1="$QBN" def2="Symbol" />
-            <Doubletxt def1="1,000,000,000" def2="Supply" />
-            <Doubletxt def1="4/4" def2="Buy/Sell Tax" />
-          </Grid>
-          <Grid
-            item
-            md={6}
-            xs={12}
-            borderRadius="5px"
-            px={3}
-            py={1}
-            marginTop={2}
-            sx={{
-              background: `${black}`,
-            }}
-          >
-            <Paragraph fontFamily="OpenSans" my={1}>
-              4% tax on each buy/sell.
-            </Paragraph>
-            <Paragraph fontFamily="OpenSans" my={1}>
-              50% for Marketing
-              <br />
-              50% into liquidity
-            </Paragraph>
-          </Grid>
-          <Grid
-            item
-            md={6}
-            xs={12}
-            borderRadius="5px"
-            display="flex"
-            justifyContent="space-between" 
-            gap="10px"
-            px={3}
-            py={1}
-            sx={{
-              background: `linear-gradient(180deg, ${nvidiaGreen}, ${darkGrey})`,
-            }}
-          >
-            <Paragraph fontFamily="RSb" my="0px">
-              Contract address:        
-            </Paragraph>
-            <Paragraph fontFamily="RSb" my="0px" textAlign="right" sx={{ wordBreak: 'break-all' }}>
-            Coming Soon
-            </Paragraph>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            display="flex"
-            alignItems="center"
-            justifyContent="space-between"
-            sx={{
-              flexDirection: { xs: "column", md: "row" },
-              alignItems: { xs: "center", md: "center" },
-            }}
-          >
-            <Paragraph fontFamily="PopR">Find us on</Paragraph>
-            <StyledList3 sx={{ display: "flex" }}>
-              {navLinks.map((item) => (
-                <Link
-                  href={item.link}
-                  target={item?.target}
-                  underline="none"
-                  color="inherit"
-                  key={item.title}
-                >
-                  <StyledButtonLink sx={{ marginTop: "0 !important", marginBottom: "0 !important" }}>{item.title}</StyledButtonLink>
-                </Link>
-              ))}
-            </StyledList3>
-          </Grid>
-        </Grid>
-      </MotionCont>
-    </Blackbg>
-  );
+// Tokenomics dataset
+const data = {
+  labels: ['LP', 'CEX Listing', 'Marketing & Partnership', 'Team Tokens', 'Ecosystem Funds/Rewards'],
+  datasets: [{
+    label: 'Token Distribution',
+    data: [75, 5, 6, 4, 10],
+    backgroundColor: [
+      nvidiaGreen,
+      '#F9860B', // Assuming nvidiaGreenAccent
+      lightGrey,
+      darkGrey,
+      'white'
+    ],
+    borderColor: 'rgba(255, 255, 255, 0.25)',
+    borderWidth: 1,
+    hoverOffset: 4
+  }]
 };
 
-export default Tokenomics;
+const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'bottom',
+      labels: {
+        color: 'white',
+        font: {
+          size: 14
+        }
+      }
+    },
+    title: {
+      display: false
+    }
+  },
+  maintainAspectRatio: false
+};
+
+
+const updatedOptions = {
+  ...options,
+  plugins: {
+    ...options.plugins,
+    legend: {
+      ...options.plugins.legend,
+      labels: {
+        ...options.plugins.legend.labels,
+        color: 'white', // Enhances readability
+        padding: 20, // Adds spacing for a cleaner look
+      }
+    },
+    tooltip: {
+      // Customizing tooltip for better visuals
+      callbacks: {
+        label: function(context) {
+          let label = context.label || '';
+          if (label) {
+            label += ': ';
+          }
+          if (context.parsed !== null) {
+            label += `${context.parsed}%`;
+          }
+          return label;
+        }
+      },
+      backgroundColor: '#333333',
+      titleColor: nvidiaGreen,
+      bodyColor: 'white',
+      titleFont: { size: 16 },
+      bodyFont: { size: 14 },
+      borderColor: nvidiaGreen,
+      borderWidth: 1
+    }
+  },
+  cutout: '70%', // Making a doughnut chart for a more modern look
+};
+
+// Placeholder for social media links, ensure these are updated with actual links
+const socialMediaLinks = [
+  { icon: <img src={BarIcon} alt="Bar Icon" style={{ width: 24, height: 24 }} />, link: "#" },
+  { icon: <img src={RecIcon} alt="Rec Icon" style={{ width: 24, height: 24 }} />, link: "#" },
+  { icon: <img src={UniIcon} alt="Uni Icon" style={{ width: 30, height: 30 }} />, link: "#" },
+  { icon: <img src={SendIcon} alt="Send Icon" style={{ width: 24, height: 24 }} />, link: "https://t.me/qubitN_io" },
+  { icon: <img src={TwitterIcon} alt="Twitter Icon" style={{ width: 24, height: 24 }} />, link: "https://x.com/qubitnio" },
+];
+
+
+const TokenEconomicsChartMerged = () => {
+  return (
+    <Blackbg noclr id="tokenomics" style={{ padding: "10px" }}>
+    <Container maxWidth="xl" sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingBottom: "100px", paddingTop: { xs: "50px", md: "100px" }, background: "rgba(6,6,6,.84)", border: `1px solid ${nvidiaGreen}`, borderRadius: "10px" }}>
+      <Typography variant="h4" color={nvidiaGreen} gutterBottom sx={{ marginBottom: "30px" }}>QubitN Tokenomics</Typography>
+      <Paragraph color="white" sx={{ textAlign: "center", marginBottom: "20px" }}>
+        Dive into the economics of QubitN — designed for sustainability and growth with a total supply of 1B tokens. Our approach ensures long-term value for participants and supports the ecosystem's expansive future.
+      </Paragraph>
+      {/* Introducing key tokenomics information */}
+      <Grid container spacing={2} justifyContent="center" sx={{ marginBottom: '20px' }}>
+        <Grid item xs={12} sm={4}>
+          <Typography variant="body1" color="white" sx={{ textAlign: "center" }}>Name: QubitN</Typography>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Typography variant="body1" color="white" sx={{ textAlign: "center" }}>Symbol: $QBN</Typography>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Typography variant="body1" color="white" sx={{ textAlign: "center" }}>Total Supply: 1,000,000,000</Typography>
+        </Grid>
+      </Grid>
+      {/* Chart Container for Improved Visualization */}
+      <div className="chart-container" style={{ width: '100%', maxWidth: '500px', height: 'auto', position: 'relative', margin: '0 auto' }}>
+        <Pie data={data} options={updatedOptions} />
+      </div>
+          <Grid item xs={12} md={6}>
+            <div className="token-distribution-container">
+              {data.labels.map((label, index) => (
+                <div key={index} className="token-distribution-box">
+                  <Typography className="token-distribution-title">{label}</Typography>
+                  <Typography className="token-distribution-value">{`${data.datasets[0].data[index]}%`}</Typography>
+                </div>
+              ))}
+            </div>
+          </Grid>
+        
+        <div className="social-links-container">
+          {socialMediaLinks.map((link, index) => (
+            <Link key={index} href={link.link} target="_blank" className="social-link">
+              {/* Assuming you replace <img> tags with <Icon> components for SVG icons */}
+              {link.icon}
+            </Link>
+          ))}
+        </div>
+      </Container>
+    </Blackbg>
+  );
+}
+
+
+export default TokenEconomicsChartMerged;
+
