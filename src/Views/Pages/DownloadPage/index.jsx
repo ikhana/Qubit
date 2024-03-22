@@ -63,18 +63,7 @@ const DownloadPage = () => {
   
     return (
         <>
-            <Home />
-            <Why/>
-            {/* <ElevateExperience/>  */}
-            {/* <Purple/> */}
-            <Styleddiv sx={{paddingTop:{xs:'150px', lg:'250px '}}}>
-            {/* <Tokenomics/> */}
-                {/* <Motionimg initial={{y:"50%"}} whileInView={{y:"0%"}} viewport={{once: true}} transition={{duration: 1}} src={Back} />
-                <Numbers/> */}
-                <Faq />
-            </Styleddiv>
-            <Summary />
-            {/* <End/> */}
+        404
         </>
     );
 }

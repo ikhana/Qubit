@@ -62,12 +62,7 @@ const SellerPage = () => {
   
     return (
         <> 
-            <HomeSeller/>
-            <WhySeller />
-             <Styleddiv sx={{paddingTop:{xs:'150px', lg:'250px'}}}>
-                <FaqSeller />
-            </Styleddiv>
-            <SummarySeller/>
+            404
         </>
     );
 }
