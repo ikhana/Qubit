@@ -2,9 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Container, Grid } from '@mui/material';
 import Maintxt from '../../Maintxt';
-import Pic1 from "../../../../assets/Images/FutureProofTech.png";
+import Pic1 from "../../../../assets/Images/FutureProofTech1.png";
 import Paragraph from '../../Paragraph';
-import Pic2 from "../../../../assets/Images/CommunityInnovation.png";
+import Pic2 from "../../../../assets/Images/CommunityInnovation2.png";
 import Cardimg from '../../Cardimg';
 import { motion } from 'framer-motion';
 
@@ -28,8 +28,9 @@ const ElevateExperience = () => {
         <Maintxt textAlign="center" my={2} color={nvidiaGreen}>Visionary QubitN</Maintxt>
         <Paragraph color="#fff" sx={{paddingBottom:"20px"}} maxWidth="900px" textAlign="center">Dive into the world of QubitN where future-proof technologies and community-driven innovation forge the path to a decentralized future.</Paragraph>
         <Grid container gap={1} alignItems="start" justifyContent="center">
+        <Cardimg xs={12} sm={12} md={4.5} padd="0 26%" psrc={Pic2} bg="transparent" def1="Community-Driven Innovation" def2="At QubitN, innovation is not a solo journey. It’s a collaborative effort that thrives on the diverse ideas and contributions of our global community. Join us to shape the future of decentralized computing, where every voice matters and every idea can spark change." />
           <Cardimg xs={12} sm={12} md={5.5} padd="0 26%" psrc={Pic1} bg="transparent" def1="Future-Proof Technologies" def2="Embark on a journey with QubitN as we explore and integrate cutting-edge technologies like quantum computing and next-gen encryption to ensure your digital infrastructure is not just for today, but tomorrow and beyond." />
-          <Cardimg xs={12} sm={12} md={5.5} padd="0 26%" psrc={Pic2} bg="transparent" def1="Community-Driven Innovation" def2="At QubitN, innovation is not a solo journey. It’s a collaborative effort that thrives on the diverse ideas and contributions of our global community. Join us to shape the future of decentralized computing, where every voice matters and every idea can spark change." />
+
         </Grid>
       </MotionCont>
     </Blackbg>
