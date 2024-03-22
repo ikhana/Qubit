@@ -7,12 +7,12 @@ import Paragraph from '../../Paragraph';
 import Pic2 from "../../../../assets/Images/IOT2.jpg";
 import Pic3 from "../../../../assets/Images/markeplace.jpg";
 import Pic4 from "../../../../assets/Images/GPU.jpg";
-import Pic5 from "../../../../assets/Images/AIMl.jpg";
+import Pic5 from "../../../../assets/Images/AIML1.jpg";
 import Pic6 from "../../../../assets/Images/community2.jpg";
 import aboutBG from "../../../../assets/Images/aboutBG.jpg";
 import Cardimg from '../../Cardimg';
 import { motion } from 'framer-motion';
-import particlesJS from 'particles.js';
+
 
 import "./index.css"
 
