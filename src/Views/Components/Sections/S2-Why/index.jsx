@@ -25,23 +25,24 @@ const Blackbg = styled(Container)`
     overflow: hidden;
     position: relative;
     z-index: 0;
-    min-height:  ${(props) => props.noht ? "auto" : "100vh"};
+    min-height: ${(props) => props.noht ? "auto" : "100vh"};
     display: flex;
     align-items: center;
+    width: 100vw; /* Ensure it covers the full viewport width */
+    margin: 0 auto; /* Center the container if needed */
+    
     ::before {
         content: "";
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%,-25%);
-        width: 100%;
-        height: 0px;
-        background-image: url(${aboutBG});
-        background-position: center;
+        position: fixed; /* Adjusted to fixed to stay relative to the viewport */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: ${black};
+        background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        border-radius: 10px;
-        z-index: 0;
+        z-index: -1;
     }
 `;
 
