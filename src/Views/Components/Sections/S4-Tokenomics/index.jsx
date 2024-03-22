@@ -31,7 +31,7 @@ const data = {
     data: [75, 5, 6, 4, 10],
     backgroundColor: [
       nvidiaGreen,
-      '#F9860B', // Assuming nvidiaGreenAccent
+      '#F9860B', 
       lightGrey,
       darkGrey,
       'white'
@@ -147,7 +147,7 @@ const TokenEconomicsChartMerged = () => {
         <Grid container spacing={4} justifyContent="center" alignItems="center">
           <Grid item xs={12} md={4} className="chart-container">
         
-              <Pie data={data} options={updatedOptions} />
+              <Pie  data={data} options={updatedOptions} />
          
           </Grid>
           <Grid item xs={12} md={6}>
