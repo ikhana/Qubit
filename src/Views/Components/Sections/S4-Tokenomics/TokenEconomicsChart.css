@@ -1,66 +1,211 @@
-/* TokenEconomicsChartEnhanced.css */
+.tokenomics-header {
+  color: #76b900;
+  text-align: center;
+  font-size: 2rem; /* Adjust size as needed for emphasis */
+  margin-bottom: 1rem; /* Spacing below the header */
+}
+
+.tokenomics-description {
+  color: #fff;
+  text-align: center;
+  max-width: 80%; /* Responsiveness */
+  margin: 0 auto 2rem; /* Centering and spacing */
+  font-size: 1.2rem; /* Readability */
+}
+
+.token-info-grid {
+  justify-content: center;
+  gap: 20px; /* Spacing between items */
+}
+
+.token-info-item {
+  background: rgba(255, 255, 255, 0.1); /* Subtle background */
+  padding: 1rem; /* Padding for content */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Center text */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.token-info-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  background: rgba(255, 255, 255, 0.2); /* Highlight */
+}
+
+.token-info-title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Spacing between title and value */
+}
+
+.token-info-value {
+  color: #76b900;
+  font-size: 1.5rem; /* Make value standout */
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
 .token-distribution-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.token-distribution-box {
+  background: linear-gradient(145deg, #232526, #414345);
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.token-distribution-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.token-distribution-title {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.token-distribution-value {
+  color: #76b900;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.social-links-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.social-link {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 10px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 24px;
+}
+/* Additional styles for responsiveness and interactivity */
+@media (min-width: 992px) {
+  .token-info-grid {
+    flex-direction: row; /* Align side by side for larger screens */
   }
-  
+
+  .token-distribution-container {
+    flex-direction: row; /* Align side by side for larger screens */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
   .token-distribution-box {
-    background: linear-gradient(145deg, #232526, #414345);
-    padding: 20px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    flex: 1 0 21%; /* Ensure that boxes take up only the space they need */
+    margin: 0 2%; /* Add some margin between boxes */
   }
-  
-  .token-distribution-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .tokenomics-description {
+    max-width: 95%; /* Increase max-width for smaller devices */
+    font-size: 1rem; /* Adjust font size for readability */
   }
-  
-  .token-distribution-title {
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 10px;
+
+  .token-info-grid {
+    gap: 10px; /* Reduce gap on smaller screens */
   }
-  
-  .token-distribution-value {
-    color: #76b900;
-    font-size: 22px;
-    font-weight: bold;
+
+  .token-info-item {
+    padding: 0.5rem; /* Adjust padding */
   }
-  
-  .social-links-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
+
+  .chart-container {
+    width: 90%; /* Adjust width for smaller devices */
+    margin-bottom: 20px; /* Add space below chart for clarity */
   }
-  
+
+  .token-distribution-box {
+    width: 100%; /* Full width on smaller screens */
+  }
+
   .social-link {
-    background: rgba(255, 255, 255, 0.1);
-    margin: 0 10px;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease;
+    width: 35px; /* Adjust social icon size for smaller screens */
+    height: 35px;
   }
-  
-  .social-link:hover {
-    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Animation for the pie chart */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
   }
-  
-  .social-icon {
-    color: #fff;
-    font-size: 24px;
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
-  
+}
+
+.chart-animation-container {
+  animation: scaleUp 0.8s ease-out forwards;
+}
+
+/* Styling for the chart legend */
+.chart-legend {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.chart-legend-color {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+/* Customizing tooltip for better visuals */
+.tooltip {
+  background: #333333;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}

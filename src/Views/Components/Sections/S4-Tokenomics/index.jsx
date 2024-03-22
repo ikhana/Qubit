@@ -68,6 +68,7 @@ const updatedOptions = {
     ...options.plugins,
     legend: {
       ...options.plugins.legend,
+       display: false, 
       labels: {
         ...options.plugins.legend.labels,
         color: 'white', // Enhances readability
@@ -109,31 +110,46 @@ const socialMediaLinks = [
   { icon: <img src={TwitterIcon} alt="Twitter Icon" style={{ width: 24, height: 24 }} />, link: "https://x.com/qubitnio" },
 ];
 
-
 const TokenEconomicsChartMerged = () => {
+  const [loadAnimation, setLoadAnimation] = React.useState(true);
+  
   return (
     <Blackbg noclr id="tokenomics" style={{ padding: "10px" }}>
-    <Container maxWidth="xl" sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingBottom: "100px", paddingTop: { xs: "50px", md: "100px" }, background: "rgba(6,6,6,.84)", border: `1px solid ${nvidiaGreen}`, borderRadius: "10px" }}>
-      <Typography variant="h4" color={nvidiaGreen} gutterBottom sx={{ marginBottom: "30px" }}>QubitN Tokenomics</Typography>
-      <Paragraph color="white" sx={{ textAlign: "center", marginBottom: "20px" }}>
-        Dive into the economics of QubitN — designed for sustainability and growth with a total supply of 1B tokens. Our approach ensures long-term value for participants and supports the ecosystem's expansive future.
-      </Paragraph>
-      {/* Introducing key tokenomics information */}
-      <Grid container spacing={2} justifyContent="center" sx={{ marginBottom: '20px' }}>
-        <Grid item xs={12} sm={4}>
-          <Typography variant="body1" color="white" sx={{ textAlign: "center" }}>Name: QubitN</Typography>
+      <Container maxWidth="xl" sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        paddingBottom: "100px",
+        paddingTop: { xs: "50px", md: "100px" },
+        background: "rgba(6,6,6,.84)",
+        border: `1px solid ${nvidiaGreen}`,
+        borderRadius: "10px"
+      }}>
+        <Typography className="tokenomics-header" gutterBottom>QubitN Tokenomics</Typography>
+        <Paragraph className="tokenomics-description">
+          Dive into the economics of QubitN — designed for sustainability and growth with a total supply of 1B tokens. Our approach ensures long-term value for participants and supports the ecosystem's expansive future.
+        </Paragraph>
+        <Grid container className="token-info-grid" spacing={2}>
+          <Grid item xs={12} sm={4} className="token-info-item">
+            <Typography className="token-info-title">Name</Typography>
+            <Typography className="token-info-value">QubitN</Typography>
+          </Grid>
+          <Grid item xs={12} sm={4} className="token-info-item">
+            <Typography className="token-info-title">Symbol</Typography>
+            <Typography className="token-info-value">$QBN</Typography>
+          </Grid>
+          <Grid item xs={12} sm={4} className="token-info-item">
+            <Typography className="token-info-title">Total Supply</Typography>
+            <Typography className="token-info-value">1,000,000,000</Typography>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={4}>
-          <Typography variant="body1" color="white" sx={{ textAlign: "center" }}>Symbol: $QBN</Typography>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Typography variant="body1" color="white" sx={{ textAlign: "center" }}>Total Supply: 1,000,000,000</Typography>
-        </Grid>
-      </Grid>
-      {/* Chart Container for Improved Visualization */}
-      <div className="chart-container" style={{ width: '100%', maxWidth: '500px', height: 'auto', position: 'relative', margin: '0 auto' }}>
-        <Pie data={data} options={updatedOptions} />
-      </div>
+        <Grid container spacing={4} justifyContent="center" alignItems="center">
+          <Grid item xs={12} md={4} className="chart-container">
+        
+              <Pie data={data} options={updatedOptions} />
+         
+          </Grid>
           <Grid item xs={12} md={6}>
             <div className="token-distribution-container">
               {data.labels.map((label, index) => (
@@ -144,11 +160,10 @@ const TokenEconomicsChartMerged = () => {
               ))}
             </div>
           </Grid>
-        
+        </Grid>
         <div className="social-links-container">
           {socialMediaLinks.map((link, index) => (
             <Link key={index} href={link.link} target="_blank" className="social-link">
-              {/* Assuming you replace <img> tags with <Icon> components for SVG icons */}
               {link.icon}
             </Link>
           ))}
@@ -158,6 +173,7 @@ const TokenEconomicsChartMerged = () => {
   );
 }
 
-
 export default TokenEconomicsChartMerged;
+
+
 

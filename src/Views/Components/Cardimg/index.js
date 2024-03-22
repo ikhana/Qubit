@@ -1,26 +1,44 @@
-import { Box, Grid } from '@mui/material';
 import React from 'react';
-import { Img } from '../../Styles/Maintext.styles';
+import { Grid, Box } from '@mui/material';
+import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 import Mediumtxt from '../Mediumtxt';
 import Paragraph from '../Paragraph';
 
-const nvidiaGreen = '#76b900'; 
-const darkGrey = '#333333'; 
-const lightGrey = '#AAAAAA'; 
-const black = '#1A1A1A'; 
-const nvidiaGreenAccent = '#F9860B'; 
+const nvidiaGreen = '#76b900';
 
-const   Cardimg = (props) => {
-    return (
-        <Grid item xs={12} sm={4.5} md={3.5} display="flex"  sx={{paddingTop:{xs:"0px", md:props.ptop}}} flexDirection="column" position="relative" borderRadius="10px" bgcolor={props.bg? props.bg: "#161616"} minHeight="500px" paddingBottom="10px "  {...props}>
-            <Img  src={props.psrc} alt="pic" paddingLeft="" />
-            <Box display="flex"  flexDirection="column" padding={props.padd ? props.padd:"20px"}>
-            <Mediumtxt color={nvidiaGreen}>{props.def1}</Mediumtxt>
-            <Paragraph my="0px">{props.def2}</Paragraph>   
-            </Box>
- 
-        </Grid>
-      );
+// Styling for the image to ensure rounded corners at the top
+const StyledImg = styled.img`
+  width: 100%;
+  border-radius: 10px 20px 0 0; 
+  object-fit: cover; 
+`;
+
+const MotionGrid = motion(Grid);
+
+const Cardimg = (props) => {
+  return (
+    <MotionGrid 
+      item 
+      xs={12} sm={4.5} md={3.5} 
+      display="flex"  
+      flexDirection="column" 
+      position="relative" 
+      borderRadius="10px" 
+      bgcolor={props.bg ? props.bg : "#161616"} 
+      minHeight="450px" 
+      paddingBottom="10px"
+      whileHover={{ scale: 1.05 }} // Smooth scaling effect on hover
+      transition={{ duration: 0.3 }} // Transition duration for the hover effect
+      {...props}
+    >
+      <StyledImg src={props.psrc} alt="pic"/>
+      <Box display="flex" flexDirection="column" padding={props.padd ? props.padd : "20px"}>
+        <Mediumtxt color={nvidiaGreen}>{props.def1}</Mediumtxt>
+        <Paragraph my="0px">{props.def2}</Paragraph>   
+      </Box>
+    </MotionGrid>
+  );
 }
- 
+
 export default Cardimg;
