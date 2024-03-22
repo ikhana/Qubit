@@ -11,11 +11,13 @@
   max-width: 80%; /* Responsiveness */
   margin: 0 auto 2rem; /* Centering and spacing */
   font-size: 1.2rem; /* Readability */
+  
 }
 
 .token-info-grid {
-  justify-content: center;
+  justify-content:center;
   gap: 20px; /* Spacing between items */
+  
 }
 
 .token-info-item {
@@ -92,11 +94,12 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 40px;
+  gap: 20px; /* This adds space between lines when they wrap */
 }
 
 .social-link {
-  background: rgba(255, 255, 255, 0.1);
-  margin: 0 10px;
+  background: rgba(117, 185, 0, 0.3);
+  margin: 10px; /* Increased margin for more space around each icon */
   border-radius: 50%;
   width: 45px;
   height: 45px;
@@ -107,62 +110,62 @@
 }
 
 .social-link:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background:rgba(117, 185, 0, 0.5);
 }
 
 .social-icon {
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 24px;
 }
-/* Additional styles for responsiveness and interactivity */
+
 @media (min-width: 992px) {
   .token-info-grid {
-    flex-direction: row; /* Align side by side for larger screens */
+    flex-direction: row; 
   }
 
   .token-distribution-container {
-    flex-direction: row; /* Align side by side for larger screens */
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
 
   .token-distribution-box {
-    flex: 1 0 21%; /* Ensure that boxes take up only the space they need */
-    margin: 0 2%; /* Add some margin between boxes */
+    flex: 1 0 21%; 
+    margin: 0 2%; 
   }
 }
 
 @media (max-width: 768px) {
   .tokenomics-description {
-    max-width: 95%; /* Increase max-width for smaller devices */
-    font-size: 1rem; /* Adjust font size for readability */
+    max-width: 95%;
+    font-size: 1rem;
   }
 
   .token-info-grid {
-    gap: 10px; /* Reduce gap on smaller screens */
+    gap: 10px; 
   }
 
   .token-info-item {
-    padding: 0.5rem; /* Adjust padding */
+    padding: 0.5rem; 
   }
 
   .chart-container {
-    width: 90%; /* Adjust width for smaller devices */
-    margin-bottom: 20px; /* Add space below chart for clarity */
+    width: 90%; 
+    margin-bottom: 20px; 
   }
 
   .token-distribution-box {
-    width: 100%; /* Full width on smaller screens */
+    width: 100%; 
   }
 
   .social-link {
-    width: 35px; /* Adjust social icon size for smaller screens */
+    width: 35px; 
     height: 35px;
   }
 }
 
-/* Animation for the pie chart */
+
 @keyframes scaleUp {
   from {
     transform: scale(0.5);
@@ -178,7 +181,7 @@
   animation: scaleUp 0.8s ease-out forwards;
 }
 
-/* Styling for the chart legend */
+
 .chart-legend {
   display: flex;
   justify-content: space-around;
@@ -201,7 +204,7 @@
   border-radius: 50%;
 }
 
-/* Customizing tooltip for better visuals */
+
 .tooltip {
   background: #333333;
   color: white;

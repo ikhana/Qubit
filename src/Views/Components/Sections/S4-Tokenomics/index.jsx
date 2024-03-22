@@ -145,12 +145,7 @@ const TokenEconomicsChartMerged = () => {
           </Grid>
         </Grid>
         <Grid container spacing={4} justifyContent="center" alignItems="center">
-          <Grid item xs={12} md={4} className="chart-container">
-        
-              <Pie  data={data} options={updatedOptions} />
-         
-          </Grid>
-          <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6}>
             <div className="token-distribution-container">
               {data.labels.map((label, index) => (
                 <div key={index} className="token-distribution-box">
@@ -160,6 +155,12 @@ const TokenEconomicsChartMerged = () => {
               ))}
             </div>
           </Grid>
+          <Grid item xs={12} md={4} className="chart-container">
+        
+              <Pie  data={data} options={updatedOptions} />
+         
+          </Grid>
+          
         </Grid>
         <div className="social-links-container">
           {socialMediaLinks.map((link, index) => (
