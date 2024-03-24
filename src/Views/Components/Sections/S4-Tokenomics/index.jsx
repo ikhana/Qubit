@@ -158,11 +158,11 @@ const TokenEconomicsChartMerged = () => {
   <Grid item xs={12} md={6}>
     <div className="token-distribution-list">
       {[
-        { category: "LP", percentage: "75%", details: "Lock for a yr & will be extended" },
-        { category: "CEX Listing", percentage: "5%", details: "Lock for 2 months" },
-        { category: "Marketing & Partnership", percentage: "6%", details: "1.5% unlock every month" },
-        { category: "Team Tokens", percentage: "4%", details: "Lock for a year at first then we burn for hype" },
-        { category: "Ecosystem Funds/Rewards", percentage: "10%", details: "Lock for a yr" },
+        { category: "LP", percentage: "75%", details: "Lock for 365 days and will be extended" },
+        { category: "CEX Listing", percentage: "5%", details: "Lock for 60 days" },
+        { category: "Marketing & Partnership", percentage: "6%", details: "1.5% Unlock every 30 days" },
+        { category: "Team Tokens", percentage: "4%", details: "Lock for 365 days a" },
+        { category: "Ecosystem Funds/Rewards", percentage: "10%", details: "Lock for 365 days" },
       ].map((token, index) => (
         <div key={index} className="token-distribution-item">
           <strong>{token.category}:</strong> {token.percentage} - {token.details}
