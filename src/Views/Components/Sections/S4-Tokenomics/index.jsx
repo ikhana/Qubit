@@ -115,17 +115,18 @@ const TokenEconomicsChartMerged = () => {
   
   return (
     <Blackbg noclr id="tokenomics" style={{ padding: "10px" }}>
-      <Container maxWidth="xl" sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        paddingBottom: "100px",
-        paddingTop: { xs: "50px", md: "100px" },
-        background: "rgba(6,6,6,.84)",
-        border: `1px solid ${nvidiaGreen}`,
-        borderRadius: "10px"
-      }}>
+ <Container maxWidth="xl" sx={{
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  paddingBottom: "100px",
+  paddingTop: { xs: "30px", md: "50px" }, // Less padding on xs screens
+  background: "rgba(6,6,6,.84)",
+  border: `1px solid ${nvidiaGreen}`,
+  borderRadius: "10px",
+}}>
+  
         <Typography className="tokenomics-header" gutterBottom>QubitN Tokenomics</Typography>
         <Paragraph className="tokenomics-description">
           Dive into the economics of QubitN — designed for sustainability and growth with a total supply of 1B tokens. Our approach ensures long-term value for participants and supports the ecosystem's expansive future.
@@ -144,24 +145,33 @@ const TokenEconomicsChartMerged = () => {
             <Typography className="token-info-value">1,000,000,000</Typography>
           </Grid>
         </Grid>
-        <Grid container spacing={4} justifyContent="center" alignItems="center">
-        <Grid item xs={12} md={6}>
-            <div className="token-distribution-container">
-              {data.labels.map((label, index) => (
-                <div key={index} className="token-distribution-box">
-                  <Typography className="token-distribution-title">{label}</Typography>
-                  <Typography className="token-distribution-value">{`${data.datasets[0].data[index]}%`}</Typography>
-                </div>
-              ))}
-            </div>
-          </Grid>
-          <Grid item xs={12} md={4} className="chart-container">
         
-              <Pie  data={data} options={updatedOptions} />
-         
-          </Grid>
-          
-        </Grid>
+        <Grid container spacing={4} justifyContent="center" alignItems="flex-start">
+  {/* Chart Container */}
+  <Grid item xs={12} md={6}>
+    <div className="chart-container">
+      <Pie data={data} options={updatedOptions} />
+    </div>
+  </Grid>
+
+  {/* Token Distribution Details */}
+  <Grid item xs={12} md={6}>
+    <div className="token-distribution-list">
+      {[
+        { category: "LP", percentage: "75%", details: "Lock for a yr & will be extended" },
+        { category: "CEX Listing", percentage: "5%", details: "Lock for 2 months" },
+        { category: "Marketing & Partnership", percentage: "6%", details: "1.5% unlock every month" },
+        { category: "Team Tokens", percentage: "4%", details: "Lock for a year at first then we burn for hype" },
+        { category: "Ecosystem Funds/Rewards", percentage: "10%", details: "Lock for a yr" },
+      ].map((token, index) => (
+        <div key={index} className="token-distribution-item">
+          <strong>{token.category}:</strong> {token.percentage} - {token.details}
+        </div>
+      ))}
+    </div>
+  </Grid>
+</Grid>
+
         <div className="social-links-container">
           {socialMediaLinks.map((link, index) => (
             <Link key={index} href={link.link} target="_blank" className="social-link">
@@ -172,6 +182,7 @@ const TokenEconomicsChartMerged = () => {
       </Container>
     </Blackbg>
   );
+  
 }
 
 export default TokenEconomicsChartMerged;
