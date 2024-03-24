@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import Mediumtxt from '../Mediumtxt';
 import Paragraph from '../Paragraph';
-
+import  './index.css';
 const nvidiaGreen = '#76b900';
 
 // Styling for the image to ensure rounded corners at the top
@@ -34,7 +34,7 @@ const Cardimg = (props) => {
     >
       <StyledImg src={props.psrc} alt="pic"/>
       <Box display="flex" flexDirection="column" padding={props.padd ? props.padd : "20px"}>
-        <Mediumtxt color={nvidiaGreen}>{props.def1}</Mediumtxt>
+        <Mediumtxt  color={nvidiaGreen}> <span className="title-glow-effect">{props.def1}</span></Mediumtxt>
         <Paragraph my="0px">{props.def2}</Paragraph>   
       </Box>
     </MotionGrid>

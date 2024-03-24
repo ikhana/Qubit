@@ -1,18 +1,19 @@
 .tokenomics-header {
   color: #76b900;
   text-align: center;
-  font-size: 2rem; /* Adjust size as needed for emphasis */
-  margin-bottom: 1rem; /* Spacing below the header */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .tokenomics-description {
   color: #fff;
   text-align: center;
-  max-width: 80%; /* Responsiveness */
-  margin: 0 auto 2rem; /* Centering and spacing */
-  font-size: 1.2rem; /* Readability */
-  
+  max-width: 90%;
+  margin: 1rem auto;
+  font-size: 1.1rem;
 }
+
 
 .token-info-grid {
   justify-content:center;
